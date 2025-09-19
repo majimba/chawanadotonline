@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chawana Maseka — Architect of Ideas & Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- HEADER NAVIGATION -->
+    <header id="main-header" class="header-transparent fixed top-0 left-0 right-0 z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-xl font-bold tracking-tighter golden-accent">CM</a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm uppercase tracking-wider">
+                <a href="#about" class="text-gray-300 hover:golden-accent transition-colors">About</a>
+                <a href="#portfolio" class="text-gray-300 hover:golden-accent transition-colors">Portfolio</a>
+                <a href="#projects" class="text-gray-300 hover:golden-accent transition-colors">Projects</a>
+                <a href="#partners" class="text-gray-300 hover:golden-accent transition-colors">Partners</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="nav-contact-btn" class="hidden md:block ghost-button px-4 py-2 text-sm font-bold rounded-md">Get in Touch</button>
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:golden-accent">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-40 transform -translate-y-full transition-transform duration-300">
+        <div class="flex justify-end p-4">
+            <button id="close-mobile-menu" class="text-white">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-6 mt-12">
+            <a href="#about" class="text-white text-lg hover:golden-accent transition-colors">About</a>
+            <a href="#portfolio" class="text-white text-lg hover:golden-accent transition-colors">Portfolio</a>
+            <a href="#projects" class="text-white text-lg hover:golden-accent transition-colors">Projects</a>
+            <a href="#partners" class="text-white text-lg hover:golden-accent transition-colors">Partners</a>
+            <button id="mobile-contact-btn" class="ghost-button px-6 py-3 text-lg font-bold rounded-md mt-8">Get in Touch</button>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- 1. HERO SECTION -->
+        <section class="h-screen min-h-[700px] flex items-center justify-center relative overflow-hidden">
+            <div class="hero-bg absolute inset-0" style="background-image: url('assets/images/chawana_headshot.png');"></div>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/60"></div>
+            <div class="relative text-center p-4 text-white z-10 max-w-4xl mx-auto fade-in-section is-visible">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter">Chawana Maseka</h1>
+                <p class="text-xl md:text-2xl mt-4 font-serif italic text-gray-200">My mission is to be an architect of ideas and tools that empower a new generation of African creators.</p>
+                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#insider-list" class="solid-button w-full sm:w-auto text-lg font-bold py-3 px-8 rounded-md">Join My Creative Circle</a>
+                    <a href="https://spotify.com" target="_blank" class="ghost-button w-full sm:w-auto text-lg font-bold py-3 px-8 rounded-md">Listen Now</a>
+                </div>
+                <a href="#portfolio" class="absolute bottom-12 left-1/2 -translate-x-1/2 text-gray-300 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. HIGHLIGHTS SECTION -->
+        <section id="portfolio" class="py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-4xl md:text-5xl font-bold">What I’m Creating</h2>
+                    <div class="w-20 h-1 golden-bg mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-section">
+                    <!-- Card 1: Luminary Co. -->
+                    <div class="bg-gray-900/50 rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luminary Co Project" class="w-full h-64 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold golden-accent">Luminary Co.</h3>
+                            <p class="text-gray-300 mt-2">A creative agency and venture studio building the future of African culture.</p>
+                            <a href="https://luminaryco.co" target="_blank" class="inline-block mt-4 text-sm font-bold uppercase tracking-wider ghost-button px-5 py-2 rounded-md">Explore the Work</a>
+                        </div>
+                    </div>
+                    <!-- Card 2: The Luminaries -->
+                    <div class="bg-gray-900/50 rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The Luminaries Collective" class="w-full h-64 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold golden-accent">The Luminaries</h3>
+                            <p class="text-gray-300 mt-2">A fellowship of visionary artists and creators collaborating on culture-defining projects.</p>
+                            <div class="mt-4 text-sm font-bold uppercase tracking-wider text-gray-400 px-5 py-2 rounded-md border border-gray-600">Coming Soon</div>
+                        </div>
+                    </div>
+                    <!-- Card 3: Stellar Splits -->
+                    <div class="bg-gray-900/50 rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stellar Splits Interface" class="w-full h-64 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold golden-accent">Stellar Splits</h3>
+                            <p class="text-gray-300 mt-2">A fintech platform bringing transparency and simplicity to royalty splits for creative teams.</p>
+                            <div class="mt-4 text-sm font-bold uppercase tracking-wider text-gray-400 px-5 py-2 rounded-md border border-gray-600">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="text-center mt-16 fade-in-section">
+                    <button id="work-with-me-btn" class="solid-button text-lg font-bold py-3 px-10 rounded-md">Work With Me</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3. ABOUT SNAPSHOT -->
+         <section id="about" class="py-20 md:py-32 textured-bg">
+             <div class="container mx-auto px-4 max-w-4xl text-center fade-in-section">
+                <p class="text-xl md:text-2xl lg:text-3xl leading-relaxed font-serif">"I am a founder-engineer-artist hybrid, driven to connect my passions for creating, my interests in complex systems, and my cause of empowering others into a single, unified purpose."</p>
+                <button id="mission-statement-btn" class="inline-block mt-8 text-lg font-bold ghost-button px-8 py-3 rounded-md">My Personal Mission Statement</button>
+             </div>
+         </section>
+
+        <!-- 4. CORE VALUES SECTION -->
+        <section class="py-20 md:py-32 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-golden-accent/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-golden-accent/3 rounded-full blur-3xl"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-20 fade-in-section">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6">My Guiding Principles</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">The core values that drive every decision, every project, and every partnership in my journey as a founder-engineer-artist.</p>
+                    <div class="w-24 h-1 golden-bg mx-auto mt-8 rounded-full"></div>
+                </div>
+                
+                <!-- Enhanced Principles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Creativity Card -->
+                    <div class="principle-card group">
+                        <div class="principle-icon-container">
+                            <div class="principle-icon creativity-icon">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-title">CREATIVITY</h3>
+                            <p class="principle-description">I will lead with Creativity, always seeking innovative solutions and encouraging new ways of thinking that push boundaries and challenge the status quo.</p>
+                            <div class="principle-quote">"Innovation distinguishes between a leader and a follower."</div>
+                        </div>
+                        <div class="principle-glow"></div>
+                    </div>
+
+                    <!-- Empathy Card -->
+                    <div class="principle-card group">
+                        <div class="principle-icon-container">
+                            <div class="principle-icon empathy-icon">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-title">EMPATHY</h3>
+                            <p class="principle-description">I will ground my decisions in Empathy, ensuring the tools and ecosystems I build serve genuine human needs and create meaningful impact.</p>
+                            <div class="principle-quote">"People don't care how much you know until they know how much you care."</div>
+                        </div>
+                        <div class="principle-glow"></div>
+                    </div>
+
+                    <!-- Grit Card -->
+                    <div class="principle-card group">
+                        <div class="principle-icon-container">
+                            <div class="principle-icon grit-icon">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-title">GRIT</h3>
+                            <p class="principle-description">I will lead with Grit, demonstrating the resilience required to navigate challenges and inspire my team to finish what we start.</p>
+                            <div class="principle-quote">"Success is not final, failure is not fatal: it is the courage to continue that counts."</div>
+                        </div>
+                        <div class="principle-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Bottom Quote -->
+                <div class="text-center mt-20 fade-in-section">
+                    <blockquote class="text-2xl md:text-3xl font-serif italic text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                        "These principles aren't just words on a page—they're the foundation of every decision I make, every project I build, and every relationship I nurture."
+                    </blockquote>
+                    <div class="mt-8 text-golden-accent font-bold text-lg">— Chawana Maseka</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CREDIBILITY / PARTNERS SECTION -->
+        <section id="partners" class="py-20 md:py-32 textured-bg">
+            <div class="container mx-auto px-4 text-center fade-in-section">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Building the Future with Visionary Partners</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-16 text-lg">Building the future requires great partners. I've been fortunate to collaborate with visionary brands and organizations.</p>
+                
+                <!-- Enhanced Partners Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
+                    <!-- Vangarde Music Card -->
+                    <div class="partner-card group">
+                        <div class="partner-logo-container">
+                            <a href="https://www.facebook.com/vangardemusic" target="_blank" class="block">
+                                <img src="assets/images/vangarde-music-logo.jpg" alt="Vangarde Music Logo" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="partner-info">
+                            <h3 class="partner-name">Vangarde Music</h3>
+                            <p class="partner-description">Founded 2021 • Exited Nov 2024</p>
+                            <div class="partner-tag">Music Label</div>
+                        </div>
+                    </div>
+
+                    <!-- Gearhead Media Card -->
+                    <div class="partner-card group">
+                        <div class="partner-logo-container">
+                            <img src="assets/images/gearhead-media-logo.jpg" alt="Gearhead Media Logo" class="partner-logo">
+                        </div>
+                        <div class="partner-info">
+                            <h3 class="partner-name">Gearhead Media</h3>
+                            <p class="partner-description">Media Production</p>
+                            <div class="partner-tag">Production</div>
+                        </div>
+                    </div>
+
+                    <!-- Kalichi Pictures Card -->
+                    <div class="partner-card group">
+                        <div class="partner-logo-container">
+                            <a href="https://www.kalichipictures.com/" target="_blank" class="block">
+                                <img src="assets/images/kalichi-pictures-logo.jpg" alt="Kalichi Pictures Logo" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="partner-info">
+                            <h3 class="partner-name">Kalichi Pictures</h3>
+                            <p class="partner-description">Multimedia Production</p>
+                            <div class="partner-tag">Photography</div>
+                        </div>
+                    </div>
+
+                    <!-- Ahmed Hamwi Card -->
+                    <div class="partner-card group">
+                        <div class="partner-logo-container">
+                            <a href="https://www.facebook.com/Theastropreneurzm" target="_blank" class="block">
+                                <img src="assets/images/ahmad.jpg" alt="Ahmed Hamwi" class="partner-logo rounded-full border-2 border-golden-accent">
+                            </a>
+                        </div>
+                        <div class="partner-info">
+                            <h3 class="partner-name">Ahmed Hamwi</h3>
+                            <p class="partner-description">Creative Partner</p>
+                            <div class="partner-tag">Strategy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Call to Action -->
+                <div class="fade-in-section">
+                    <button id="become-partner-btn" class="solid-button text-lg font-bold py-4 px-12 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-golden-accent/25">
+                        Become a Partner
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. INSIDER LIST SIGNUP -->
+        <section id="insider-list" class="textured-bg py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center max-w-2xl fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold golden-accent">Join My Creative Circle</h2>
+                <p class="text-gray-300 mt-4 mb-8">Get exclusive updates on the music, tools, and ideas shaping the culture. No spam, just a direct line to my world.</p>
+                <!-- SUBSTACK SIGNUP FORM - Replace this section with your Substack embed code -->
+                <div class="max-w-lg mx-auto">
+                    <!-- 
+                    SUBSTACK SETUP INSTRUCTIONS:
+                    1. Go to substack.com and create your publication
+                    2. Name it "Chawana's Creative Circle" or similar
+                    3. Go to Settings → Publication → Advanced
+                    4. Find "Embed signup form" and copy the HTML code
+                    5. Replace everything between these comment tags with Substack code
+                    6. The form will automatically match your website's styling
+                    
+                    BENEFITS:
+                    - Unlimited free subscribers
+                    - Built-in audience discovery
+                    - Easy monetization later
+                    - Professional email management
+                    -->
+                    <iframe src="https://chawanascircle.substack.com/embed" width="100%" height="320" style="border:1px solid rgba(255, 199, 91, 0.3); background:transparent; border-radius: 12px;" frameborder="0" scrolling="no"></iframe>
+                    <!-- END MAILCHIMP REPLACEMENT AREA -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- CONTACT PROMPT -->
+         <section id="contact" class="py-20 md:py-32">
+             <div class="container mx-auto px-4 text-center max-w-3xl fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold">Let's Build a Legacy</h2>
+                <p class="text-gray-300 mt-4 mb-8 text-lg">If you're driven to shape culture through creativity and technology, I'm looking for the collaborators and partners who will help forge what's next. Let's connect.</p>
+                 <button id="contact-options-btn" class="solid-button text-xl font-bold py-4 px-12 rounded-md">Get in Touch</button>
+             </div>
+         </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900/50 py-12">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8">
+                <a href="https://www.facebook.com/chawana.maseka" target="_blank" class="hover:golden-accent transition-colors">Facebook</a>
+                <a href="https://www.tiktok.com/@_chawana" target="_blank" class="hover:golden-accent transition-colors">TikTok</a>
+                <a href="https://x.com/ChawanaMaseka" target="_blank" class="hover:golden-accent transition-colors">X / Twitter</a>
+                <a href="https://www.instagram.com/chaw_ana" target="_blank" class="hover:golden-accent transition-colors">Instagram</a>
+                <a href="https://www.youtube.com/@chawana4327" target="_blank" class="hover:golden-accent transition-colors">YouTube</a>
+                <a href="https://www.linkedin.com/in/chawana-maseka/" target="_blank" class="hover:golden-accent transition-colors">LinkedIn</a>
+            </div>
+            <p class="text-sm">&copy; <span id="year"></span> Chawana Maseka. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mission Statement Modal -->
+    <div id="mission-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold golden-accent">My Personal Mission Statement</h2>
+                    <button id="close-mission-modal" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+                </div>
+                
+                <div class="space-y-8 text-gray-300">
+                    <div>
+                        <h3 class="text-xl font-bold golden-accent mb-3">My personal mission is…</h3>
+                        <p class="leading-relaxed">To be an architect of ideas and tools. I use my gifts of interdisciplinary creativity and systems thinking to build ecosystems that empower a new generation of African creators, shape global culture, and forge a lasting legacy of innovation. This statement defines my purpose and guides my actions as I work to build a better future through technology and art.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold golden-accent mb-3">My key strengths are…</h3>
+                        <p class="leading-relaxed">My core strengths are my mind, my creativity, and my words. I am a visionary strategist and systems thinker, able to see patterns and possibilities where others see chaos. This allows me to break down ambitious goals into scalable frameworks. My interdisciplinary creativity is my superpower, enabling me to thrive in music, film, technology, and writing, and to blend them in unique and innovative ways.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold golden-accent mb-3">I pledge to further my development in…</h3>
+                        <p class="leading-relaxed">Translating vision into consistent execution. I am actively developing greater discipline and dedication to overcome procrastination and fear, ensuring I start and finish my ambitious projects. This involves cultivating the courage to act despite uncertainty and building the self-acceptance needed to be a more authentic and effective collaborator and leader.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold golden-accent mb-3">My core values as a leader are…</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <strong class="golden-accent">Creativity:</strong> I will seek innovative solutions and encourage bold, original thinking.
+                            </div>
+                            <div>
+                                <strong class="golden-accent">Empathy:</strong> I will ground my decisions in human-centered design, ensuring that what I build serves genuine needs.
+                            </div>
+                            <div>
+                                <strong class="golden-accent">Grit:</strong> I will demonstrate resilience and perseverance, navigating challenges and inspiring my team to finish what we start.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold golden-accent mb-3">I pledge to advance society's greater good by…</h3>
+                        <p class="leading-relaxed">Being an architect of empowering ecosystems. I will use my creativity to innovate and build new tools, my empathy to ensure those tools serve the genuine needs of creators, and my grit to build resilient platforms that shape culture for the better. My contribution will be to forge a legacy of progress, providing a new generation of African creators with the systems they need to connect with the world and thrive.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold golden-accent mb-3">I have chosen this mission because…</h3>
+                        <p class="leading-relaxed">It is the most authentic and energizing reflection of my identity as a founder–engineer–artist hybrid. It connects my passions for creating, my interests in complex systems, my cause of empowering others, and my strengths in systems thinking into a unified purpose. It is ambitious yet specific, providing both a grand vision and a clear direction for my life's work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Options Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-gray-900 rounded-xl max-w-2xl w-full shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="contact-modal-content">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold golden-accent">Let's Connect</h2>
+                        <p class="text-gray-400 text-sm mt-1">Choose your preferred way to get in touch</p>
+                    </div>
+                    <button id="close-contact-modal" class="text-gray-400 hover:text-white text-2xl transition-colors duration-200 p-2 hover:bg-gray-800 rounded-full">&times;</button>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- WhatsApp Option -->
+                    <a href="https://wa.me/260978035471" target="_blank" class="block bg-green-600 hover:bg-green-700 text-white p-6 rounded-xl transition-all duration-300 group hover:scale-105 hover:shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center group-hover:bg-green-400 transition-colors duration-300">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-xl font-bold">WhatsApp</h3>
+                                    <span class="text-xs bg-green-500 px-2 py-1 rounded-full">Instant</span>
+                                </div>
+                                <p class="text-green-100 font-mono text-lg">+260 978 035 471</p>
+                                <p class="text-sm text-green-200">Quick messages and voice notes</p>
+                            </div>
+                            <div class="text-green-200 group-hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Phone Call Option -->
+                    <a href="tel:+260978035471" class="block bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-xl transition-all duration-300 group hover:scale-105 hover:shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-xl font-bold">Call Directly</h3>
+                                    <span class="text-xs bg-blue-500 px-2 py-1 rounded-full">Available</span>
+                                </div>
+                                <p class="text-blue-100 font-mono text-lg">+260 978 035 471</p>
+                                <p class="text-sm text-blue-200">For immediate conversation</p>
+                            </div>
+                            <div class="text-blue-200 group-hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Email Option -->
+                    <a href="mailto:chawana.maseka@gmail.com" class="block bg-gray-700 hover:bg-gray-600 text-white p-6 rounded-xl transition-all duration-300 group hover:scale-105 hover:shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-14 h-14 bg-gray-600 rounded-full flex items-center justify-center group-hover:bg-gray-500 transition-colors duration-300">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.91L12 10.09l9.455-6.27h.909c.904 0 1.636.732 1.636 1.636z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-xl font-bold">Gmail</h3>
+                                    <span class="text-xs bg-gray-500 px-2 py-1 rounded-full">24h</span>
+                                </div>
+                                <p class="text-gray-200 font-mono text-lg">chawana.maseka@gmail.com</p>
+                                <p class="text-sm text-gray-300">Detailed proposals and formal inquiries</p>
+                            </div>
+                            <div class="text-gray-300 group-hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-700">
+                    <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span>Online now</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                            <span>CAT timezone</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
