@@ -68,4 +68,4 @@ chawana_dot_online/
 
 ## 📄 License
 
-© 2024 Chawana Maseka. All rights reserved.
+© 2025 Chawana Maseka. All rights reserved.
