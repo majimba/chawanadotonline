@@ -1,0 +1,13 @@
+# Netlify redirects file
+# This file should be placed in the root of your site directory
+
+# Redirect all traffic to HTTPS
+http://chawana.online/* https://chawana.online/:splat 301!
+http://www.chawana.online/* https://chawana.online/:splat 301!
+
+# Handle SPA routing (if needed in future)
+# /*    /index.html   200
+
+# Custom 404 page (optional)
+# /404.html    /index.html   404
+

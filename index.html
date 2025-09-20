@@ -18,8 +18,7 @@
             <a href="#" class="text-xl font-bold tracking-tighter golden-accent">CM</a>
             <nav class="hidden md:flex items-center space-x-6 text-sm uppercase tracking-wider">
                 <a href="#about" class="text-gray-300 hover:golden-accent transition-colors">About</a>
-                <a href="#portfolio" class="text-gray-300 hover:golden-accent transition-colors">Portfolio</a>
-                <a href="#projects" class="text-gray-300 hover:golden-accent transition-colors">Projects</a>
+                <a href="#portfolio" class="text-gray-300 hover:golden-accent transition-colors">Projects</a>
                 <a href="#partners" class="text-gray-300 hover:golden-accent transition-colors">Partners</a>
             </nav>
             <div class="flex items-center space-x-4">
@@ -44,8 +43,7 @@
         </div>
         <nav class="flex flex-col items-center space-y-6 mt-12">
             <a href="#about" class="text-white text-lg hover:golden-accent transition-colors">About</a>
-            <a href="#portfolio" class="text-white text-lg hover:golden-accent transition-colors">Portfolio</a>
-            <a href="#projects" class="text-white text-lg hover:golden-accent transition-colors">Projects</a>
+            <a href="#portfolio" class="text-white text-lg hover:golden-accent transition-colors">Projects</a>
             <a href="#partners" class="text-white text-lg hover:golden-accent transition-colors">Partners</a>
             <button id="mobile-contact-btn" class="ghost-button px-6 py-3 text-lg font-bold rounded-md mt-8">Get in Touch</button>
         </nav>
@@ -278,25 +276,35 @@
             <div class="container mx-auto px-4 text-center max-w-2xl fade-in-section">
                 <h2 class="text-3xl md:text-4xl font-bold golden-accent">Join My Creative Circle</h2>
                 <p class="text-gray-300 mt-4 mb-8">Get exclusive updates on the music, tools, and ideas shaping the culture. No spam, just a direct line to my world.</p>
-                <!-- SUBSTACK SIGNUP FORM - Replace this section with your Substack embed code -->
+                <!-- NETLIFY FORMS - Email signup -->
                 <div class="max-w-lg mx-auto">
-                    <!-- 
-                    SUBSTACK SETUP INSTRUCTIONS:
-                    1. Go to substack.com and create your publication
-                    2. Name it "Chawana's Creative Circle" or similar
-                    3. Go to Settings → Publication → Advanced
-                    4. Find "Embed signup form" and copy the HTML code
-                    5. Replace everything between these comment tags with Substack code
-                    6. The form will automatically match your website's styling
-                    
-                    BENEFITS:
-                    - Unlimited free subscribers
-                    - Built-in audience discovery
-                    - Easy monetization later
-                    - Professional email management
-                    -->
-                    <iframe src="https://chawanascircle.substack.com/embed" width="100%" height="320" style="border:1px solid rgba(255, 199, 91, 0.3); background:transparent; border-radius: 12px;" frameborder="0" scrolling="no"></iframe>
-                    <!-- END MAILCHIMP REPLACEMENT AREA -->
+                    <form name="newsletter-signup" method="POST" netlify netlify-honeypot="bot-field" class="space-y-4">
+                        <!-- Honeypot field for spam protection -->
+                        <div class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </div>
+                        
+                        <div>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder="Enter your email address" 
+                                required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-golden-accent focus:ring-2 focus:ring-golden-accent/20 transition-all duration-300"
+                            >
+                        </div>
+                        
+                        <button 
+                            type="submit" 
+                            class="w-full solid-button text-lg font-bold py-3 px-8 rounded-lg hover:scale-105 transition-transform duration-300"
+                        >
+                            Join My Creative Circle
+                        </button>
+                        
+                        <p class="text-xs text-gray-400 text-center">
+                            No spam, just exclusive updates on music, tools, and ideas shaping culture.
+                        </p>
+                    </form>
                 </div>
             </div>
         </section>
@@ -481,6 +489,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Hidden form for Netlify form detection -->
+    <form name="newsletter-signup" netlify netlify-honeypot="bot-field" hidden>
+        <input type="email" name="email" />
+        <input name="bot-field" />
+    </form>
 
     <script src="js/script.js"></script>
 </body>
